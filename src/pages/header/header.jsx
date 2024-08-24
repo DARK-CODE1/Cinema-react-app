@@ -3,6 +3,7 @@ import NavListItem from '../../components/navListItem';
 import NavListData from '../../data/navListData';
 import './header.css';
 import Search from '../../components/SearchBox/search';
+import Button from '../../components/Button/button';
 
 
 const Header = () => {
@@ -15,7 +16,8 @@ const Header = () => {
           <NavListItem key={nav._id} nav={nav} />
         ))}
       </ul>
-      <Search/>
+      <Search />
+      <Button icon={<ion-icon name="log-in"></ion-icon>} name='Sing Up' />
     </header>
   )
 }

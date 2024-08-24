@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import './banner.css';
+import bgImg from '../../Images/bg-transformer.jpg';
+import MovieContent from '../../components/movieContent/movieContent';
+import MovieDate from '../../components/movieDate/movieDate';
+import MovieTrailer from '../../components/movieTrailder/movieTrailer';
+import MovieSwiper from '../../components/movieSwiper/movieSwiper';
+
+
 function Banner() {
-    const [movie, setmovie] = useState([]);
+    const [movies, setmovie] = useState([]);
     const fetchData = () => {
         fetch('http://localhost:3000/data/movieData.json')
             .then(res => res.json())
@@ -14,38 +21,25 @@ function Banner() {
         }, []);
 
     return (
-        (<div className='banner'>
+        <div className='banner'>
             <div className="movie">
-                <img src="ff" alt="Background Image" className="bgImg" />
-                <div class="container-fluid">
-                    <div class="row">
+                <img src={bgImg} alt="Background" className="bgImg active" />
+                <div className="container-fluid">
+                    <div className="row">
                         <div className="col-lg-6 col-md-12">
-                            <div className="content">
-                                <img src="gg" alt="Movie Title" className="movie-title" />
-                                <h4>
-                                    <span>Year</span>
-                                    <span><i>Age</i></span>
-                                    <span>Length</span>
-                                    <span>Category</span>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Consectetur non sint quas? Optio nihil facilis, id et ipsum
-                                    enim iure deserunt veritatis animi sint possimus, accusant
-                                    ium odio voluptas esse? Perferendis?
-                                </p>
-                                <div className="buttom">
-                                Buttom
-                                </div>
-                            </div>
+                            <MovieContent />
                         </div>
                         <div className="col-lg-6 col-md-12">
-
+                            <MovieDate />
+                            <MovieTrailer />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>)
-    )
+            {movies&&movies.length>0 && <MovieSwiper slides={movies}/>}
+            
+        </div>
+    );
 }
 
 export default Banner
