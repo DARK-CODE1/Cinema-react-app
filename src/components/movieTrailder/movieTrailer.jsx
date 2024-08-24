@@ -1,13 +1,22 @@
-import React from 'react'
-import'./movieTrailer.css';
-function MovieTrailer() {
+import React, { useState } from 'react'
+import './movieTrailer.css';
+import Modal from '../modal/modal';
+function MovieTrailer({ movie }) {
+    const [modal, setModal] = useState(false);
+    const toggleModal = () => {
+        setModal(!modal)
+    };
+
     return (
-        <div className="trailer active">
-            <a href="#" className="playBtn">
-                <ion-icon name="play-outline"></ion-icon>
-            </a>
-            <p>Watch Trailer</p>
-        </div>
+        <>
+            <div className={`trailer ${movie.active ? 'active' : undefined}`}>
+                <a href="#" className="playBtn" onClick={toggleModal}>
+                    <ion-icon name="play-outline"></ion-icon>
+                </a>
+                <p>Watch Trailer</p>
+            </div>
+            {movie.active && <Modal movie={movie} status={modal} toggleModal={toggleModal}/>}
+        </>
     )
 }
 

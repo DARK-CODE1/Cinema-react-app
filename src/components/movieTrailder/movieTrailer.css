@@ -7,7 +7,7 @@
     z-index: 999;
 }
 
-.banner .trailer {
+.banner .trailer.active {
     visibility: visible;
     opacity: 1;
     transform: scale(1);

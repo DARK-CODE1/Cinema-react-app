@@ -6,14 +6,14 @@ import './movieSwiper.css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-function MovieSwiper({ slides }) {
+function MovieSwiper({ slides, slideChange }) {
     return (
         <Swiper
             effect={'coverflow'}
             grabCursor={true}
             slidesPerView={'auto'}
             autoplay={{
-                delay: 2500,
+                delay: 4500,
                 disableOnInteraction: false,
             }}
             coverflowEffect={{
@@ -29,8 +29,8 @@ function MovieSwiper({ slides }) {
 
             {
                 slides.map(slide => (
-                    <SwiperSlide>
-                        <img src={slide.previewImg} alt="Perview" />
+                    <SwiperSlide key={slide._id}>
+                        <img src={slide.previewImg} alt="Perview"  onClick={()=>slideChange(slide._id)}/>
                     </SwiperSlide>
                 ))
             }
