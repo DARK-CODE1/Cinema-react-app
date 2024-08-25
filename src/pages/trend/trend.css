@@ -1,0 +1,17 @@
+.trendSwiper.swiper{
+    padding-top: 50px !important;
+    padding-bottom: 30px !important;
+}
+.trendSwiper.Swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 240px;
+    height: auto;
+    margin-bottom: 100px;
+}
+
+.trendSwiper.Swiper-slide img{
+    display: block;
+    width: 100%;
+    border-radius: 0px;
+}

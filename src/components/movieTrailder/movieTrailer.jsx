@@ -15,7 +15,7 @@ function MovieTrailer({ movie }) {
                 </a>
                 <p>Watch Trailer</p>
             </div>
-            {movie.active && <Modal movie={movie} status={modal} toggleModal={toggleModal}/>}
+            {movie.active && <Modal movie={movie} status={modal} toggleModal={toggleModal} />}
         </>
     )
 }

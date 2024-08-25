@@ -8,7 +8,7 @@ header {
     align-items: center;
     padding: 15px 100px;
     transition: 0.5s;
-    z-index: 999;
+    z-index: 9999;
 }
 
 header.scrolled {
