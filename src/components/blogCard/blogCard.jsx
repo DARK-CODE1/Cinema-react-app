@@ -11,7 +11,7 @@ function BlogCard({ blog }) {
                 <p className="post-category">{blog.category}</p>
 
                 <h2 className="title">
-                    <a href="#">{blog.title}</a>
+                    <a href="/">{blog.title}</a>
                 </h2>
 
                 <div className="d-flex align-item-center">

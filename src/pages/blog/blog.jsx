@@ -15,7 +15,7 @@ function Blog() {
             fetchData();
         }, []);
     return (
-        <section className="blogs" id="blogs">
+        <section className="blogs" id="blog">
             <div className="container-fluid">
                 <div className="row">
                     <h4 className="section-title">our Blog</h4>

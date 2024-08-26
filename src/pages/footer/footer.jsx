@@ -30,16 +30,16 @@ const Footer = () => {
                 quasi voluptatum accusantium.
               </p>
               <div className="social-media mt-3">
-                <a href="#" className='twitter'>
+                <a href="/" className='twitter'>
                   <ion-icon name="logo-twitter"></ion-icon>
                 </a>
-                <a href="#" className='facebook'>
+                <a href="/" className='facebook'>
                   <ion-icon name="logo-facebook"></ion-icon>
                 </a>
-                <a href="#" className='instagram'>
+                <a href="/" className='instagram'>
                   <ion-icon name="logo-instagram"></ion-icon>
                 </a>
-                <a href="#" className='youtube'>
+                <a href="/" className='youtube'>
                   <ion-icon name="logo-youtube"></ion-icon>
                 </a>
               </div>

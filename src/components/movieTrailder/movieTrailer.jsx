@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import './movieTrailer.css';
 import Modal from '../modal/modal';
 function MovieTrailer({ movie }) {
@@ -10,7 +10,7 @@ function MovieTrailer({ movie }) {
     return (
         <>
             <div className={`trailer ${movie.active ? 'active' : undefined}`}>
-                <a href="#" className="playBtn" onClick={toggleModal}>
+                <a href="/" className="playBtn" onClick={toggleModal}>
                     <ion-icon name="play-outline"></ion-icon>
                 </a>
                 <p>Watch Trailer</p>

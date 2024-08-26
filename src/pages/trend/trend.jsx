@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Autoplay, EffectCoverflow } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import TrendCard from '../../components/trendCard/trendCard';
 
 
